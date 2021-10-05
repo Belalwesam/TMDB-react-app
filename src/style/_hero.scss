@@ -1,0 +1,123 @@
+.hero-section {
+  padding: 5rem 0;
+  .hero-text {
+    padding: 0 1.5rem;
+    line-height: 1.5;
+    h3 {
+      color: $accent-color;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+    p {
+      color: $basic-color;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+    }
+    .search-link a {
+      color: $accent-color;
+      background-color: transparent;
+      padding: 1rem 4rem;
+      font-weight: 700;
+      border-radius: 35px;
+      border: 1px solid $accent-color;
+      outline: none;
+      display: inline-block;
+      transition: all 0.4s ease;
+      letter-spacing: 1px;
+      font-size: 1.1rem;
+      &:hover {
+        text-decoration: none;
+        border-color: $basic-color;
+        color: $basic-color;
+      }
+    }
+  }
+}
+.hero-img > img {
+  overflow: hidden;
+  animation: spin 16s infinite linear;
+  overflow: hidden;
+}
+//the upcoming section starts here
+.movies-heading {
+  color: $accent-color;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.single-movie-img {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  &:hover {
+    & > img {
+      transform: scale(1.1);
+    }
+  }
+  img {
+    transition: all 0.4s ease;
+    border-radius: 8px 8px 0 0;
+    min-height: 382px;
+  }
+}
+.single-movie-text {
+  border-radius: 0 0 8px 8px;
+  color: $basic-color;
+  background-color: $secondary-color;
+  padding: 0.7rem;
+  .movie-title {
+    a {
+      font-weight: 700;
+      font-size: 1.075rem;
+      text-decoration: none;
+      color: $basic-color;
+      transition: color 0.4s ease;
+      &:hover {
+        color: $accent-color;
+      }
+    }
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .release-date {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $accent-color;
+    margin: 1rem 0 0.4rem 0 !important;
+    span {
+      font-weight: 300;
+      color: $basic-color;
+    }
+  }
+  .rating {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $accent-color;
+    span {
+      font-weight: 300;
+      color: $basic-color;
+    }
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 900px) {
+  .hero-section {
+    height: auto !important;
+  }
+  .hero-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .single-movie-img > img {
+    width: 100% !important;
+    min-height: 250px;
+  }
+}

@@ -1,0 +1,39 @@
+.movie-detailes-img > img {
+  max-height: 600px;
+  width: 100%;
+  border-radius: 8px 0 0 8px;
+}
+.movie-detailes-text {
+  padding: 4rem 2rem;
+  height: 100%;
+  background-color: $secondary-color;
+  border-radius: 0 8px 8px 0;
+  .overview {
+    color: $basic-color;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    margin-bottom: 2rem !important;
+  }
+  p {
+    color: $basic-color;
+    font-weight: 500;
+    font-size: 0.99rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.7rem !important;
+    span {
+      color: $accent-color;
+      font-weight: 300;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .movie-detailes-text {
+    padding: 1rem !important;
+    border-radius: 0 0 8px 8px;
+  }
+  .movie-detailes-img > img {
+    border-radius: 8px 8px 0 0 !important;
+  }
+}
